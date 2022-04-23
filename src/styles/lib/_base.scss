@@ -1,8 +1,8 @@
 @import './var';
 html {
-    font-size: 1.5em;
+    font-size: .5em;
     text-align: center;
-    background-color: $white;
+    background-color: $backgroundColor;
 }
 body {
     width: 100%;
@@ -10,7 +10,6 @@ body {
     font-size: 1.25em;
     font-family: $ff-primary;
     color: $fontSecondaryColor;
-    background-color: $white;
 }
 
 a {

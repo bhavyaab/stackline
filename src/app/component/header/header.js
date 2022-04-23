@@ -6,10 +6,8 @@ export const Header = () => {
     return (
         <div className="header">
             <span>
-                <StacklinLogo title="stackline logo" 
-                              width='5vw' 
-                              marginTop='1.25vw'
-                              marginLeft='2vw' />
+                <StacklinLogo className='logo' title="stackline logo" 
+                              width='3em' />
             </span>
         </div>
     )
