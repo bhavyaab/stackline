@@ -21,4 +21,26 @@
         margin-top: 1em;
         color: $fontPrimaryColor;
     }
+    h6{
+        width: 70%;
+        margin-top: 1em;
+        margin-left: 15%;
+        line-height: 1.4em;
+    }
+    .tags{
+        margin-top: 1em;
+        padding: 1em 0;
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;
+        li{
+            text-align: left;
+            font-weight: 500;
+            margin: 0.15em .5em;
+            border-radius: 0.35em;
+            display: inline-block;
+            padding: 0.25em 1.25em;
+            color: $fontPrimaryColor;
+            border: 1px solid $borderColor;
+        }
+    }
 }

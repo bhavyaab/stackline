@@ -8,11 +8,6 @@ export const stacklineSlice = createSlice({
     reducers: {}
 });
 
-export const ninjaImage = (state) => state.stacklineState.image;
-export const getTitle = (state) => state.stacklineState.title;
-export const getSubtitle = (state) => state.stacklineState.subtitle;
-export const getTags = (state) => state.stacklineState.tags;
-
 export const productInfo = (state) => {
     return { 
         title: state.stacklineState.title,

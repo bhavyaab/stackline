@@ -4,11 +4,15 @@ import './infoSection.scss';
 import { ninjaImage,productInfo } from '../../../store/stacklineSlice';
 
 export const InfoSection = () => {
-    const {image, title, subTitle, tags} = useSelector(productInfo)
+    const {image, title, subtitle, tags} = useSelector(productInfo)
     return (
         <div className="infoSection">
             <img src={image} alt="ninja bullet product image" />
             <h2>{title}</h2>
+            <h6>{subtitle}</h6>
+            <ul className="tags">
+                {tags.map((ele, i) => <li key={i}>{ele}</li>)}
+            </ul>
         </div>
     )
 }
