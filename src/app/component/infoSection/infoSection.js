@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import './infoSection.scss';
-import { ninjaImage,productInfo } from '../../../store/stacklineSlice';
+import { productInfo } from '../../../store/stacklineSlice';
 
 export const InfoSection = () => {
     const {image, title, subtitle, tags} = useSelector(productInfo)
