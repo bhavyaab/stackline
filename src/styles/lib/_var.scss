@@ -16,3 +16,18 @@ $white: #fff;
 
 $ff-primary: 'lato', Sans;
 $ff-secondary: 'roboto', Sans;
+
+
+:export {
+    colorPrimary: $colorPrimary;
+    colorSecondary: $colorSecondary;
+    colorTertiory: $colorTertiory;
+    backgroundColor: $backgroundColor;
+    fontPrimaryColor : $fontPrimaryColor ;
+    fontSecondaryColor: $fontSecondaryColor;
+    borderColor: $borderColor;
+    black: $black;
+    white: $white;
+    ffPrimary: $ff-primary;
+    ffSecondary: $ff-secondary;
+}
