@@ -3,6 +3,6 @@ import stacklineSliceReducer from './stacklineSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: stacklineSliceReducer,
+    stacklineState: stacklineSliceReducer,
   },
 });

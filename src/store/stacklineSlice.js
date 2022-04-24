@@ -8,7 +8,18 @@ export const stacklineSlice = createSlice({
     reducers: {}
 });
 
+export const salesData = (state) => state.stacklineState.sales;
+export const productInfo = (state) => {
+    return { 
+        title: state.stacklineState.title,
+        image: state.stacklineState.image,
+        subtitle: state.stacklineState.subtitle,
+        tags: state.stacklineState.tags
+    }
 
-export const { } = stacklineSlice.actions;
+}
+
+
+export const {  } = stacklineSlice.actions;
 
 export default stacklineSlice.reducer;
