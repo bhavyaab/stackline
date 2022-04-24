@@ -11,22 +11,17 @@ function formatDate(date) {
     var month = D.getMonth() + 1;
     var day = D.getDate()
     //change month and date to two digit
-    if(month.length === 1) month = '0' + month;
-    if(day.length === 1) day = '0' + day;
+    if(month < 10) month = '0' + month.toString();
+    if(day < 10) day = '0' + day.toString();
   return [month, day, year].join('-')
 }
 
 //add $ sign to amount and comma saperated in 1000s
 const money = (value) => '$' + value.toLocaleString("en-US");
 
-const formateDataAsRequirement = (sales) => {
-    
-    return sales;
-}
 export const TableMaker = () => {
     var header = ['WEEK ENDING', 'RETAIL SALES', 'WHOLESALE SALE', 'UNIT SOLD', 'RETAILER MARGIN']
-    var tableData = formateDataAsRequirement(useSelector(salesData));
-    console.log('+++++++++++++++++++++++++++++++++++\n',tableData)
+    var tableData = useSelector(salesData);
     return (
         <div className="tableMaker">
             <table>
@@ -40,7 +35,10 @@ export const TableMaker = () => {
                         tableData.map((ele, i) => {
                             var dataRow = []
                             for(var prop in ele){
-                                dataRow.push(<td key={'td-' + i + '-' + prop}>{ele[prop]}</td>)
+                                var value = ele[prop]
+                                if(prop === 'weekEnding') value = formatDate(ele[prop]);
+                                if(prop === 'retailSales' || prop === 'wholesaleSales' || prop === 'retailerMargin') value = money(value);
+                                dataRow.push(<td key={'td-' + i + '-' + prop}>{value}</td>)
                             }
                             return (<tr key={'tr-' + i + '-' + prop}>{dataRow}</tr>)
                     })}                     
