@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Chart from 'react-google-charts'
 import variables from '../../../styles/lib/_var.scss';
 import { salesData } from "../../../store/stacklineSlice";
-
+import './drawChart.scss'
 
 export const options = {
   chartArea: { width: '94%' },//chart diaplay area

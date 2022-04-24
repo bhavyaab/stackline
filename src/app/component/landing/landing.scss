@@ -8,12 +8,5 @@
         width: 75%;
         min-height: 3em;
         position: absolute;
-        ul{
-            display: flex;
-            background-color: $white;
-            justify-content: space-around;
-            padding: 2em 0;
-            border-top: 1px solid $borderColor;
-        }
     }
 }
